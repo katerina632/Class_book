@@ -16,7 +16,15 @@ public:
 
 	void Sort() const;
 	void PrintByName() const;
-	void Search(string search) const;
+	void SearchByName(string search) const;
+	void SearchByAuthor(string search) const;
+	void SearchByPublisher(string search) const;
+	void SearchByYear(int search) const;
+	void SearchByRating(float search) const;
+
+
+
+
 	
 };
 

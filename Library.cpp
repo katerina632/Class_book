@@ -63,12 +63,47 @@ void Library::PrintByName() const
 }
 
 
-void Library::Search(string search) const
+void Library::SearchByName(string search) const
 {
 	for (int i = 0; i < booksCount; i++) {
 		if (arr[i].name.find(search) != string::npos) {
 			arr[i].Print();
 		}
+	}	
+}
+
+void Library::SearchByAuthor(string search) const
+{
+	for (int i = 0; i < booksCount; i++) {
+		if (arr[i].author.find(search) != string::npos) {
+			arr[i].Print();
+		}
 	}
-	//if( book.   find_first_of(search))
+}
+
+void Library::SearchByPublisher(string search) const
+{
+	for (int i = 0; i < booksCount; i++) {
+		if (arr[i].publisher.find(search) != string::npos) {
+			arr[i].Print();
+		}
+	}
+}
+
+void Library::SearchByYear(int search) const
+{
+	for (int i = 0; i < booksCount; i++) {
+		if (arr[i].year==search) {
+			arr[i].Print();
+		}
+	}
+}
+
+void Library::SearchByRating(float search) const
+{
+	for (int i = 0; i < booksCount; i++) {
+		if (arr[i].rating == search) {
+			arr[i].Print();
+		}
+	}
 }
